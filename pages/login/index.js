@@ -8,6 +8,11 @@ import FooterView from "../home/footer"
 
 
 const index = () => {
+    const validateFormWithJS = (e) => {
+        e.preventDefault()
+        var a =  document.querySelector('#first').value
+        alert(a)
+    }
   return (
     <>
      <Head>
@@ -20,8 +25,15 @@ const index = () => {
 
        <HeadView /> 
 
-        <div className={styles.center}>
-          Profile Page
+        <div >
+  <label for="first">First name:</label>
+  <input type="text" id="first" name="first" />
+
+  <label for="last">Last name:</label>
+  <input type="text" id="last" name="last" />
+
+  <button type="button" onClick={validateFormWithJS}>Submit</button>
+
         </div>
 
         <FooterView/>
@@ -30,5 +42,7 @@ const index = () => {
     </>
   )
 }
+
+
 
 export default index

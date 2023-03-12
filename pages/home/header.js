@@ -15,12 +15,16 @@ const header = () => {
         e.preventDefault()
         router.push('home')
     }
+    const proifleBtn = (e) => {
+        e.preventDefault()
+        router.push('login')
+    }
 
   return (
     <div className={styles.description}>
             <a href="#" onClick={homeBtn} ><p>Home</p></a>
             <a href="#" onClick={profileBtn} ><p>Profile</p></a>
-            <a href="#"><p>Login</p></a>
+            <a href="#" onClick={proifleBtn}><p>Login</p></a>
         <div>
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
