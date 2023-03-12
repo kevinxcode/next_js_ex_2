@@ -1,14 +1,25 @@
 import React from 'react'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { useRouter } from 'next/router'
+
 import styles from '@/styles/Home.module.css'
-const inter = Inter({ subsets: ['latin'] })
 
 const header = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const router = useRouter();
+    const profileBtn = (e) => {
+        e.preventDefault()
+        router.push('profile')
+    }
+    const homeBtn = (e) => {
+        e.preventDefault()
+        router.push('home')
+    }
+
   return (
     <div className={styles.description}>
-            <a href="#"><p>Home</p></a>
-            <a href="#"><p>Profile</p></a>
+            <a href="#" onClick={homeBtn} ><p>Home</p></a>
+            <a href="#" onClick={profileBtn} ><p>Profile</p></a>
             <a href="#"><p>Login</p></a>
         <div>
             <a
