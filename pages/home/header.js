@@ -19,11 +19,16 @@ const header = () => {
         e.preventDefault()
         router.push('login')
     }
+    const dataBtn = (e) => {
+      e.preventDefault()
+      router.push('data')
+  }
 
   return (
     <div className={styles.description}>
             <a href="#" onClick={homeBtn} ><p>Home</p></a>
             <a href="#" onClick={profileBtn} ><p>Profile</p></a>
+            <a href="#" onClick={dataBtn}><p>Data</p></a>
             <a href="#" onClick={proifleBtn}><p>Login</p></a>
         <div>
             <a
